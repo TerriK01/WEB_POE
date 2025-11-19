@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Gemstone Haven</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="product.js"></script>
+  <style>
+   
+    .plan-container img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover; /* Ensures image maintains aspect ratio within the 50px x 50px box */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo"><img src="images/Logo.jpg" alt="Logo"></div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Enquiry.html">Enquiry</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navigation for Cart & Home -->
+  <div class="nav bg-info">
+    <div class="home">
+      <a title="Home" href="#" class="btn btn-info">
+        <span class="glyphicon glyphicon-home"></span>
+      </a>  
+    </div>
+    <div class="cart">
+      <button id="cartButton" title="View Shopping Cart - 0 Items" onclick="changeTab('shoppingCart')" class="btn btn-primary">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <span id="itemCount" class="badge">0</span>
+      </button>
+    </div>  
+  </div>
+
+  <!-- Main Content -->
+  <h1>Shop Our Collection</h1>
+
+  <section class="big-box">
+    <!-- Product 1 -->
+    <section class="plan-container" id="product-1">
+      <img src="Images/Gold6.jpg" alt="Eternal Hoops">
+      <p class="plan-text">Eternal Hoops</p>
+      <p class="plan2-price">R399</p>
+      <input type="number" id="quantity-1" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(1, 'Eternal Hoops', 399)" class="btn btn-success">Add to Cart</button>
+    </section>
+
+    <!-- Product 2 -->
+    <section class="plan-container" id="product-2">
+      <img src="Images/Gold.jpg" alt="Golden Elegance">
+      <p class="plan-text">Golden Elegance</p>
+      <p class="plan2-price">R499</p>
+      <input type="number" id="quantity-2" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(2, 'Golden Elegance', 499)" class="btn btn-success">Add to Cart</button>
+    </section>
+
+    <!-- Product 3 -->
+    <section class="plan-container" id="product-3">
+      <img src="Images/Gold1.jpg" alt="Golden Elegance">
+      <p class="plan-text">Golden Elegance</p>
+      <p class="plan2-price">R499</p>
+      <input type="number" id="quantity-3" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(3, 'Golden Elegance', 499)" class="btn btn-success">Add to Cart</button>
+    </section>
+  </section>
+
+  <section class="big-box">
+    <!-- Product 4 -->
+    <section class="plan-container" id="product-4">
+      <img src="Images/Aurora Gold Drops.jpg" alt="Aurora Gold Drops">
+      <p class="plan-text">Aurora Gold Drops</p>
+      <p class="plan2-price">R129</p>
+      <input type="number" id="quantity-4" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(4, 'Aurora Gold Drops', 129)" class="btn btn-success">Add to Cart</button>
+    </section>
+
+    <!-- Product 5 -->
+    <section class="plan-container" id="product-5">
+      <img src="Images/Celestial Charm Drops.jpg" alt="Celestial Charm Drops">
+      <p class="plan-text">Celestial Charm Drops</p>
+      <p class="plan2-price">R499</p>
+      <input type="number" id="quantity-5" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(5, 'Celestial Charm Drops', 499)" class="btn btn-success">Add to Cart</button>
+    </section>
+
+    <!-- Product 6 -->
+    <section class="plan-container" id="product-6">
+      <img src="Images/RoseGold4.jpg" alt="RoseGold4">
+      <p class="plan-text">Rose bands</p>
+      <p class="plan2-price">R99</p>
+      <input type="number" id="quantity-6" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(6, 'Rose bands', 799)" class="btn btn-success">Add to Cart</button>
+    </section>
+  </section>
+
+  <section class="big-box">
+    <!-- Product 7 -->
+    <section class="plan-container" id="product-7">
+      <img src="Images/RoseGold5.jpg" alt="RoseGold5">
+      <p class="plan-text">Rosie</p>
+      <p class="plan2-price">R279</p>
+      <input type="number" id="quantity-7" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(7, 'Rosie', 279)" class="btn btn-success">Add to Cart</button>
+    </section>
+
+    <!-- Product 8 -->
+    <section class="plan-container" id="product-8">
+      <img src="Images/Silver Symphony.jpg" alt="Silver Symphony">
+      <p class="plan-text">Silver Symphony</p>
+      <p class="plan2-price">R499</p>
+      <input type="number" id="quantity-8" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(8, 'Silver Symphony', 499)" class="btn btn-success">Add to Cart</button>
+    </section>
+
+    <!-- Product 9 -->
+    <section class="plan-container" id="product-9">
+      <img src="Images/Timeless Twinkle.jpg" alt="Timeless Twinkle">
+      <p class="plan-text">Timeless Twinkle</p>
+      <p class="plan2-price">R499</p>
+      <input type="number" id="quantity-9" value="1" min="1" class="quantity-input">
+      <button onclick="addItemToCart(9, 'Timeless Twinkle', 499)" class="btn btn-success">Add to Cart</button>
+    </section>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-distributed">
+    <div class="footer-right">
+      <a href="#"><img src="images/facebook.jpg" alt="Facebook" style="width:36px; height:36px;"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram" style="width:36px; height:36px;"></a>
+      <a href="#"><img src="images/tik tok.png" alt="TikTok" style="width:36px; height:36px;"></a>
+    </div>
+    <div class="footer-left">
+      <p class="footer-links">
+        <a class="link-1" href="index.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="Products.html">Our Products</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="#">Faq</a>
+        <a href="Contact.html">Contact Us</a>
+      </p>
+      <p>Gemstone Haven &copy; 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
